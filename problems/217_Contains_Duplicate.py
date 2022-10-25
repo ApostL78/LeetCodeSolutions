@@ -2,8 +2,9 @@ from typing import List
 import pytest
 
 
-def contains_duplicate(nums: List[int]) -> bool:
-    return len(nums) > len(set(nums))
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        return len(nums) > len(set(nums))
 
 
 @pytest.mark.parametrize("test_input,expected", [
@@ -19,4 +20,5 @@ def contains_duplicate(nums: List[int]) -> bool:
     ([10 ** 9], False)
 ])
 def test_contains_duplicate(test_input, expected):
-    assert contains_duplicate(test_input) == expected
+    solution = Solution()
+    assert solution.containsDuplicate(test_input) == expected
