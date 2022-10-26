@@ -1,3 +1,4 @@
 venv
 .idea
 .pytest_cache
+/testcases*for*future*problems.txt

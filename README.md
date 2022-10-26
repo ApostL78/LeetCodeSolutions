@@ -1,5 +1,5 @@
 # Python Solutions for Leetcode
 
-| №   | Title                                                                   |                                                 Solution                                                 |  Time complexity  |  Space complexity  |
-|:----|-------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------:|:-----------------:|:------------------:|
-| 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) |  [Python](https://github.com/ApostL78/LeetCodeSolutions/blob/master/problems/217_Contains_Duplicate.py)  |      `O(n)`       |       `O(1)`       |
+| №     | Title                                                                   |                                                 Solution                                                 | Time Complexity | Space Complexity |                                                    Best Tries                                                     |
+|:------|-------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------:|:---------------:|:----------------:|:-----------------------------------------------------------------------------------------------------------------:|
+| `217` | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) |  [Python](https://github.com/ApostL78/LeetCodeSolutions/blob/master/problems/217_Contains_Duplicate.py)  |     `O(n)`      |      `O(1)`      | `Runtime:` `475 ms`***,*** **faster than** `91.62%` <br/> `Memory Usage:` `25.9 MB`***,*** **less than** `67.10%` |
