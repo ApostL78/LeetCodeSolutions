@@ -1,13 +1,12 @@
-# Definition for singly-linked list.
 from typing import Optional
-
+from problems.utils import list2linkedlist, linkedlist2list, ListNode
 import pytest
 
-
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
 
 
 class Solution:
@@ -36,26 +35,6 @@ class Solution:
             return head
 
 
-def list2linkedlist(input_list: list) -> Optional[ListNode]:
-    if input_list:
-        head = ListNode(input_list[0])
-        current = head
-        for val in input_list[1:]:
-            current.next = ListNode(val)
-            current = current.next
-    else:
-        head = None
-    return head
-
-
-def linked_list_to_list(linked_list: Optional[ListNode]) -> list:
-    res = []
-    while linked_list:
-        res.append(linked_list.val)
-        linked_list = linked_list.next
-    return res
-
-
 @pytest.mark.parametrize("test_input,expected", [
     ([1, 2, 3, 4], [2, 1, 4, 3]),
     ([], []),
@@ -78,4 +57,4 @@ def linked_list_to_list(linked_list: Optional[ListNode]) -> list:
 def test_swap_pairs(test_input, expected):
     solution = Solution()
     test_input = list2linkedlist(test_input)
-    assert linked_list_to_list(solution.swapPairs(test_input)) == expected
+    assert linkedlist2list(solution.swapPairs(test_input)) == expected
