@@ -25,3 +25,11 @@ def linkedlist2list(linked_list: Optional[ListNode]) -> list:
         res.append(linked_list.val)
         linked_list = linked_list.next
     return res
+
+
+def node_val_exists(head: Optional[ListNode], val: int) -> bool:
+    while head:
+        if val == head.val:
+            return True
+        head = head.next
+    return False
