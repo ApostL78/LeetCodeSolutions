@@ -30,6 +30,6 @@ class Solution:
     (["dog", "door", "doom"], "do"),
     (["iterator", "italic", "item"], "it")
 ])
-def test_contains_duplicate(test_input, expected):
+def test_longest_common_prefix(test_input, expected):
     solution = Solution()
     assert solution.longestCommonPrefix(test_input) == expected

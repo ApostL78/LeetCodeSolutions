@@ -57,7 +57,7 @@ class Solution:
     [random.randint(-10 ** 4, 10 ** 4) for x in range(10 ** 4)],
     [random.randint(-10 ** 2, 10 ** 2) for y in range(10 ** 2)]
 ])
-def test_swap_pairs(test_input):
+def test_get_random(test_input):
     test_input = list2linkedlist(test_input)
     solution = Solution(test_input)
     assert node_val_exists(test_input, solution.getRandom())

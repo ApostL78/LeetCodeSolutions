@@ -44,7 +44,7 @@ class Solution:
     ([6, 5, 4, 3, 2, 1, 5, 6], [0, 6, 5, 5, 5, 5, 6, 0]),
     ([6, 5, 4, 3, 2, 1, 5], [0, 0, 5, 5, 5, 5, 0])
 ])
-def test_swap_pairs(test_input, expected):
+def test_next_larger_nodes(test_input, expected):
     solution = Solution()
     test_input = list2linkedlist(test_input)
     assert solution.nextLargerNodes(test_input) == expected

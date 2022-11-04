@@ -54,7 +54,7 @@ class Solution:
     ([13, 564, 869, -34, 124, 879, 2348, -4351, 672, 4577, 23215, -2, 12, -42],
      [13, 869, 124, 2348, 672, 23215, 12, 564, -34, 879, -4351, 4577, -2, -42]),
 ])
-def test_swap_pairs(test_input, expected):
+def test_odd_even_list(test_input, expected):
     solution = Solution()
     test_input = list2linkedlist(test_input)
     assert linkedlist2list(solution.oddEvenList(test_input)) == expected

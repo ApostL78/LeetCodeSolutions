@@ -26,6 +26,6 @@ class Solution:
     (2 ** 31 - 1, 46_340),
     (123456789, 11_111)
 ])
-def test_contains_duplicate(test_input, expected):
+def test_my_sqrt(test_input, expected):
     solution = Solution()
     assert solution.mySqrt(test_input) == expected

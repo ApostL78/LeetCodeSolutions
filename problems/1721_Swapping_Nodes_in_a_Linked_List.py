@@ -36,7 +36,7 @@ class Solution:
     ([12, 19, 45, 32, 35, 23, 87, 2], 4, [12, 19, 45, 35, 32, 23, 87, 2]),
     ([12, 19, 45, 32, 35, 23, 87, 2, 4], 4, [12, 19, 45, 23, 35, 32, 87, 2, 4])
 ])
-def test_swap_pairs(test_input, k, expected):
+def test_swap_nodes(test_input, k, expected):
     solution = Solution()
     test_input = list2linkedlist(test_input)
     assert linkedlist2list(solution.swapNodes(test_input, k)) == expected

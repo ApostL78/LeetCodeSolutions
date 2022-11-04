@@ -44,7 +44,7 @@ class Solution:
      [1] + [9 for i in range(99)] + [8]),
     ([6, 5, 4, 3, 2, 1, 5, 6], [7, 0, 5, 5, 3, 5, 0], [7, 2, 4, 8, 7, 5, 0, 6])
 ])
-def test_swap_pairs(l1, l2, expected):
+def test_add_two_numbers(l1, l2, expected):
     solution = Solution()
     l1 = list2linkedlist(l1)
     l2 = list2linkedlist(l2)
