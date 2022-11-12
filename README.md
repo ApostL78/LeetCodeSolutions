@@ -1,3 +1,39 @@
+# Run with Docker
+
+To run all tests without cloning repository you can use `docker` ([install](https://www.docker.com/) before usage) with
+following command:
+
+  ```commandline
+docker pull apostl/leetcode-solutions:latest
+```
+
+Then run pulled image:
+
+```commandline
+docker run apostl/leetcode-solutions:latest
+```
+
+# Expected result
+
+After running the image you will see the result of running all tests in console:
+
+```shell
+============================= test session starts ==============================
+platform linux -- Python 3.10.8, pytest-7.2.0, pluggy-1.0.0 -- /usr/local/bin/python
+cachedir: .pytest_cache
+rootdir: /app, configfile: pytest.ini
+collecting ... collected 170 items
+
+.....
+```
+
+Listing containers must show 0 containers running:
+
+```shell
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS              PORTS                    NAMES
+```
+
 # Python Solutions for LeetCode
 
 | №      | Title                                                                                                                                                                       |                                                                         Solution                                                                          |                        Complexity                        |                                                        Best Tries                                                        |
