@@ -25,6 +25,8 @@ rootdir: /app, configfile: pytest.ini
 collecting ... collected 170 items
 
 .....
+
+============================= 170 passed in 2.00s ==============================
 ```
 
 Listing containers must show 0 containers running:
@@ -32,6 +34,14 @@ Listing containers must show 0 containers running:
 ```shell
 $ docker ps
 CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS              PORTS                    NAMES
+```
+
+But in list of all containers you can see 1 container:
+
+```shell
+$ docker ps -a
+CONTAINER ID   IMAGE                              COMMAND        CREATED          STATUS                     PORTS     NAMES
+9d2438f4c558   apostl/leetcode-solutions:latest   "pytest -vv"   11 seconds ago   Exited (0) 7 seconds ago             frosty_bartik
 ```
 
 # Python Solutions for LeetCode
@@ -55,3 +65,4 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 | `148`  | [Sort List](https://leetcode.com/problems/sort-list/)                                                                                                                       |                               [Python](https://github.com/ApostL78/LeetCodeSolutions/blob/master/problems/148_Sort_List.py)                               |    ***Time:*** `O(nlog(n))`<br/> ***Space:*** `O(1)`     | `Runtime:`  `669 ms`***,*** ***faster than*** `87.44%` <br/> `Memory Usage:`  `36.4 MB`***,*** ***less than*** `90.87%`  |
 | `2074` | [Reverse Nodes in Even Length Groups](https://leetcode.com/problems/reverse-nodes-in-even-length-groups/)                                                                   |                 [Python](https://github.com/ApostL78/LeetCodeSolutions/blob/master/problems/2074_Reverse_Nodes_in_Even_Length_Groups.py)                  |       ***Time:*** `O(kn)`<br/> ***Space:*** `O(1)`       | `Runtime:`  `2293 ms`***,*** ***faster than*** `88.36%` <br/> `Memory Usage:`  `53.5 MB`***,*** ***less than*** `93.65%` |
 | `86`   | [Partition List](https://leetcode.com/problems/partition-list/)                                                                                                             |                             [Python](https://github.com/ApostL78/LeetCodeSolutions/blob/master/problems/86_Partition_List.py)                             |       ***Time:*** `O(n)`<br/> ***Space:*** `O(1)`        |  `Runtime:`  `32 ms`***,*** ***faster than*** `97.52%` <br/> `Memory Usage:`  `13.5 MB`***,*** ***less than*** `99.97%`  |
+| `143`  | [Reorder List](https://leetcode.com/problems/reorder-list/)                                                                                                                 |                             [Python](https://github.com/ApostL78/LeetCodeSolutions/blob/master/problems/143_Reorder_List.py)                              |       ***Time:*** `O(n)`<br/> ***Space:*** `O(1)`        |  `Runtime:`  `91 ms`***,*** ***faster than*** `94.85%` <br/> `Memory Usage:`  `23.8 MB`***,*** ***less than*** `95.63%`  |
