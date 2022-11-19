@@ -1,6 +1,8 @@
 from typing import Optional
 
-from problems.utils import Node
+import pytest
+
+from problems.utils import Node, list2nodes
 
 """
 # Definition for a Node.
@@ -33,3 +35,32 @@ class Solution:
             return new_head
         except AttributeError:
             return head
+
+
+@pytest.mark.parametrize("linked_list,expected", [
+    ([[7, None], [13, 0], [11, 4], [10, 2], [1, 0]],
+     [[7, None], [13, 0], [11, 4], [10, 2], [1, 0]]),
+    ([[1, 1], [2, 1]], [[1, 1], [2, 1]]),
+    ([[3, None], [3, 0], [3, None]], [[3, None], [3, 0], [3, None]]),
+    ([], []),
+    ([[-10 ** 4, None]], [[-10 ** 4, None]]),
+    ([[10 ** 4, None]], [[10 ** 4, None]]),
+    ([[x, None] for x in range(1000)], [[x, None] for x in range(1000)]),
+    ([[x, x] for x in range(1000)], [[x, x] for x in range(1000)]),
+    ([[x, 0] for x in range(1000)], [[x, 0] for x in range(1000)]),
+    ([[5, 1], [2, None], [6, 6], [3, 0], [9, 9], [1, 5], [7, 3], [3, 2],
+      [8, None], [4, 4]],
+     [[5, 1], [2, None], [6, 6], [3, 0], [9, 9], [1, 5], [7, 3], [3, 2],
+      [8, None], [4, 4]])
+])
+def test_copy_random_list(linked_list, expected):
+    solution = Solution()
+    before = input_list = list2nodes(linked_list)
+    after = solution.copyRandomList(input_list)
+    while before and after and before.next and after.next:
+        if before is after or before.next is after or (
+                before.random is after.random and before.random is not None):
+            assert False
+        before, after = before.next, after.next
+    assert (before is after is None) or (
+            before is not after and before.random is not after)
