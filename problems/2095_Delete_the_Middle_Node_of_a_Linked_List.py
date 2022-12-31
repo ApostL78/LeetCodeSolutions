@@ -1,5 +1,6 @@
 import random
 from typing import Optional, Tuple
+
 import pytest
 
 
@@ -26,7 +27,8 @@ class Solution:
 
 
 @pytest.fixture
-def generate_input_and_expected_list(nodes: int) -> Tuple[Optional[ListNode], Optional[ListNode]]:
+def generate_input_and_expected_list(nodes: int) -> Tuple[
+    Optional[ListNode], Optional[ListNode]]:
     mid = nodes // 2
     random_int = random.randint(1, 10 ** 5)
     input_list = ListNode(random_int)
@@ -61,4 +63,5 @@ def linked_list_to_list(linked_list: Optional[ListNode]) -> list:
 def test_delete_middle(generate_input_and_expected_list, nodes):
     input_list, expected_list = generate_input_and_expected_list
     solution = Solution()
-    assert linked_list_to_list(solution.deleteMiddle(input_list)) == linked_list_to_list(expected_list)
+    assert linked_list_to_list(
+        solution.deleteMiddle(input_list)) == linked_list_to_list(expected_list)

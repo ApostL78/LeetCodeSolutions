@@ -1,6 +1,8 @@
-import pytest
-from problems.utils import ListNode, list2linkedlist, linkedlist2list
 from typing import Optional
+
+import pytest
+
+from problems.utils import ListNode, list2linkedlist, linkedlist2list
 
 
 # Definition for singly-linked list.

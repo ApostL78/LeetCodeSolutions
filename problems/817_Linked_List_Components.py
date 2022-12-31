@@ -1,5 +1,7 @@
-import pytest
 from typing import List, Optional
+
+import pytest
+
 from problems.utils import ListNode, list2linkedlist
 
 

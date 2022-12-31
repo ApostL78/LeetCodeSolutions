@@ -1,8 +1,9 @@
+import random
 from typing import Optional
 
-from problems.utils import ListNode, list2linkedlist, linkedlist2list
-import random
 import pytest
+
+from problems.utils import ListNode, list2linkedlist, linkedlist2list
 
 
 # Definition for singly-linked list.

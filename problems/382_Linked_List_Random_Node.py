@@ -1,7 +1,9 @@
 import random
 from typing import Optional
-from problems.utils import list2linkedlist, ListNode, node_val_exists
+
 import pytest
+
+from problems.utils import list2linkedlist, ListNode, node_val_exists
 
 
 # Definition for singly-linked list.
